@@ -8,8 +8,8 @@ public class calculatrice {
         String first = sc.nextLine();
         System.out.print("Saisir le deuxième nombre : ");
         String second = sc.nextLine();
-        System.out.print("Le résultat est: " + (Integer.parseInt(first) + Integer.parseInt(second)));
-
+        System.out.print("Le résultat est: " + (Integer.parseInt(first) + Integer.parseInt(second)) + "\n");
+        useAgain();
         sc.close();
     }
     
@@ -19,7 +19,8 @@ public class calculatrice {
         String first = sc.nextLine();
         System.out.print("Saisir le deuxième nombre : ");
         String second = sc.nextLine();
-        System.out.print("Le résultat est : " + (Integer.parseInt(first) - Integer.parseInt(second)));
+        System.out.print("Le résultat est : " + (Integer.parseInt(first) - Integer.parseInt(second)) + "\n");
+        useAgain();
         sc.close(); 
     }
 
@@ -29,7 +30,8 @@ public class calculatrice {
         String first = sc.nextLine();
         System.out.print("Saisir le deuxième nombre : ");
         String second = sc.nextLine();
-        System.out.print("Le résultat est : " + (Integer.parseInt(first) * Integer.parseInt(second)));
+        System.out.print("Le résultat est : " + (Integer.parseInt(first) * Integer.parseInt(second)) + "\n");
+        useAgain();
         sc.close();
     }
 
@@ -39,7 +41,8 @@ public class calculatrice {
         String first = sc.nextLine();
         System.out.print("Saisir le deuxième nombre : ");
         String second = sc.nextLine();
-        System.out.print("Le résultat est : " + (Double.parseDouble(first) / Double.parseDouble(second)));
+        System.out.print("Le résultat est : " + (Double.parseDouble(first) / Double.parseDouble(second)) + "\n");
+        useAgain();
         sc.close();
     }
 
@@ -61,5 +64,18 @@ public class calculatrice {
             chooseOperation();
         }
         sc.close();
+    }
+
+    public static void useAgain() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Voulez-vous faire un autre calcule ? [Y = yes || N = no] ");
+        String answer = sc.nextLine();
+
+        if(answer.equals("Y")) {
+            chooseOperation();
+        } else {
+            System.out.print("Aurevoir!");
+            sc.close();
+        }
     }
 }
